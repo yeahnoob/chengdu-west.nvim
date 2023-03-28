@@ -1,1 +1,1 @@
-require("tokyonight")._load("moon")
+require("chengdu-west")._load("moon")
