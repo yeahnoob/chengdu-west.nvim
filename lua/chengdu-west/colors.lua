@@ -166,15 +166,6 @@ function M.setup(opts)
     text = colors.blue7,
   }
 
-  colors.git.ignore = colors.dark3
-  colors.black = util.darken(colors.bg, 0.8, "#000000")
-  colors.border_highlight = util.darken(colors.blue1, 0.8)
-  colors.border = colors.black
-
-  -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.bg_dark
-  colors.bg_statusline = colors.bg_dark
-
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
     or config.options.styles.sidebars == "dark" and colors.bg_dark
@@ -184,21 +175,10 @@ function M.setup(opts)
     or config.options.styles.floats == "dark" and colors.bg_dark
     or colors.bg
 
-  colors.bg_visual = util.darken(colors.blue0, 0.7)
-  colors.bg_search = colors.blue0
-  colors.fg_sidebar = colors.fg_dark
-  -- colors.fg_float = config.options.styles.floats == "dark" and colors.fg_dark or colors.fg
-  colors.fg_float = colors.fg
-
   colors.error = colors.red1
   colors.warning = colors.yellow
   colors.info = colors.blue2
   colors.hint = colors.teal
-
-  config.options.on_colors(colors)
-  if opts.transform and config.is_day() then
-    util.invert_colors(colors)
-  end
 
   return colors
 end
