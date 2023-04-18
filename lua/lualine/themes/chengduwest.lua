@@ -1,49 +1,49 @@
-local colors = require("chengdu-west.colors").setup({ transform = true })
-local config = require("chengdu-west.config").options
+local colors = require("chengduwest.colors").setup({ transform = true })
+local config = require("chengduwest.config").options
 
-local chengdu-west = {}
+local chengduwest = {}
 
-chengdu-west.normal = {
+chengduwest.normal = {
   a = { bg = colors.blue, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.blue },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
 
-chengdu-west.insert = {
+chengduwest.insert = {
   a = { bg = colors.green, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.green },
 }
 
-chengdu-west.command = {
+chengduwest.command = {
   a = { bg = colors.yellow, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.yellow },
 }
 
-chengdu-west.visual = {
+chengduwest.visual = {
   a = { bg = colors.magenta, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.magenta },
 }
 
-chengdu-west.replace = {
+chengduwest.replace = {
   a = { bg = colors.red, fg = colors.black },
   b = { bg = colors.fg_gutter, fg = colors.red },
 }
 
-chengdu-west.terminal = {
+chengduwest.terminal = {
   a = {bg = colors.green1, fg = colors.black },
   b = {bg = colors.fg_gutter, fg=colors.green1 },
 }
 
-chengdu-west.inactive = {
+chengduwest.inactive = {
   a = { bg = colors.bg_statusline, fg = colors.blue },
   b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
 }
 
 if config.lualine_bold then
-  for _, mode in pairs(chengdu-west) do
+  for _, mode in pairs(chengduwest) do
     mode.a.gui = "bold"
   end
 end
 
-return chengdu-west
+return chengduwest
