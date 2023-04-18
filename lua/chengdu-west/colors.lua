@@ -154,7 +154,7 @@ function M.setup(opts)
 
   -- Color Palette
   ---@class ColorScheme: Palette
-  local colors = vim.tbl_deep_extend("force", M.default, 'day')
+  local colors = vim.tbl_deep_extend("force", M.default, M['day'])
 
   util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
