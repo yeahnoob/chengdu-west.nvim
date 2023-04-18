@@ -147,14 +147,14 @@ function M.setup(opts)
   local config = require("chengdu-west.config")
 
   local style = config.is_day() and config.options.light_style or config.options.style
-  local palette = M[style] or {}
+  local palette = M["day"] or {}
   if type(palette) == "function" then
     palette = palette()
   end
 
   -- Color Palette
   ---@class ColorScheme: Palette
-  local colors = M['day']()
+  local colors = vim.tbl_deep_extend("force", {}, palette)
 
   util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
