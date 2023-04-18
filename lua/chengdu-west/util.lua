@@ -1,4 +1,4 @@
-local ts = require("tokyonight.treesitter")
+local ts = require("chengdu-west.treesitter")
 
 local M = {}
 
