@@ -1,6 +1,6 @@
 # 🏙 Chengdu West Moon
 
-A dark and light Neovim theme. Modified from [TokyoNight](https://github.com/enkia/tokyo-night-vscode-theme) Moon theme.
+A dark and light Neovim theme. Modified from [ChengduWest](https://github.com/enkia/chengdu-west-vscode-theme) Moon theme.
 
 Includes extra themes for Kitty, Alacritty, iTerm and Fish.
 

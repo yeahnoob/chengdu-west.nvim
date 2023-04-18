@@ -1,4 +1,4 @@
-local util = require("tokyonight.util")
+local util = require("chengdu-west.util")
 
 local M = {}
 
@@ -13,7 +13,7 @@ function M.generate(colors)
 
   local alacritty = util.template(
     [[
-# TokyoNight Alacritty Colors
+# ChengduWest Alacritty Colors
 colors:
   # Default colors
   primary:
