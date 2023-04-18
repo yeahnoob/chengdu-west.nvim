@@ -46,7 +46,7 @@ M.night = {
   bg = "#1a1b26",
   bg_dark = "#16161e",
 }
-M.day = M.night
+-- M.day = M.night
 
 -- A light colorscheme for NVIM, using Lua, based on the Chengdu online pictures' colors and themes.
 M.day = function()
@@ -154,7 +154,7 @@ function M.setup(opts)
 
   -- Color Palette
   ---@class ColorScheme: Palette
-  local colors = vim.tbl_deep_extend("force", M.default, M['day'])
+  local colors = M['day']()
 
   util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
